@@ -1,0 +1,9 @@
+[Unit]
+Description=VOLTdemort service
+After=multi-user.target
+[Service]
+Type=simple
+Restart=always
+ExecStart=/usr/bin/python3 -u /opt/voltdemort/voltdemort.py
+[Install]
+WantedBy=multi-user.target
