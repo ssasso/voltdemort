@@ -68,7 +68,7 @@ class VoltdemortCollector:
         print("ModBus response error:")
         print(e)
       
-      gauge = GaugeMetricFamily(GAUGE_KEY_NAME, "Voltdemort, PZEM-004T exporter", labels=['instance', 'measure'])
+      gauge = GaugeMetricFamily(GAUGE_KEY_NAME, "Voltdemort, PZEM-004T exporter", labels=['tty', 'measure'])
       for key,item in dict_payload.items():
         gauge.add_metric([TTY, key], item)
       yield gauge
